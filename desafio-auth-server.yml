@@ -18,13 +18,16 @@ security:
         client:
             client-id: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
             client-secret: pAVl2bKEUPCAMl5jnb5wVxZ_
-            accessTokenUri: https://www.googleapis.com/oauth2/v3/token
-            userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
-            clientAuthenticationScheme: query
-            scope: profile email
+            accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+            userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+            clientAuthenticationScheme: form
+            scope:
+              - openid
+              - email
+              - profile
           resource:
-            userInfoUri: https://www.googleapis.com/plus/v1/people/me
-            preferTokenInfo: false
+            userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+            preferTokenInfo: true
 
 spring:
     datasource:
