@@ -13,22 +13,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-security:
-    oauth2:
-        client:
-        client-id: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
-        client-secret: pAVl2bKEUPCAMl5jnb5wVxZ_
-        accessTokenUri: https://www.googleapis.com/oauth2/v4/token
-        userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
-        clientAuthenticationScheme: form
-        scope:
-          - openid
-          - email
-          - profile
-      resource:
-          userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
-          preferTokenInfo: true
-
 spring:
     datasource:
         data: classpath:/sql/data.sql
@@ -44,3 +28,19 @@ spring:
         hibernate:
             ddl-auto: none
         show-sql: true
+        
+security:
+    oauth2:
+        client:
+        client-id: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
+        client-secret: pAVl2bKEUPCAMl5jnb5wVxZ_
+        accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+        userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+        clientAuthenticationScheme: form
+        scope:
+          - openid
+          - email
+          - profile
+      resource:
+          userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+          preferTokenInfo: true
