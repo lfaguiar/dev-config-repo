@@ -28,3 +28,19 @@ security:
       resource:
           userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
           preferTokenInfo: true
+
+spring:
+    datasource:
+        data: classpath:/sql/data.sql
+        driver-class-name: com.mysql.jdbc.Driver
+        password: 'root'
+        platform: mysql
+        schema: classpath:/sql/schema.sql
+        url: jdbc:mysql://localhost:3311/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLDialect
+        generate-ddl: false
+        hibernate:
+            ddl-auto: none
+        show-sql: true
