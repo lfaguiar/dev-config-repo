@@ -16,15 +16,15 @@ eureka:
 security:
     oauth2:
         client:
-            client-id: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
-            client-secret: pAVl2bKEUPCAMl5jnb5wVxZ_
-            accessTokenUri: https://www.googleapis.com/oauth2/v4/token
-            userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
-            clientAuthenticationScheme: form
-            redirect_uri: http://localhost:4200/login
-            redirect-uri: http://localhost:4200/login
-            scope: openid
-        resource:
-            tokenInfoUri: https://www.googleapis.com/oauth2/v3/token
-            userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
-            preferTokenInfo: true
+        client-id: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
+        client-secret: pAVl2bKEUPCAMl5jnb5wVxZ_
+        accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+        userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+        clientAuthenticationScheme: form
+        scope:
+          - openid
+          - email
+          - profile
+      resource:
+          userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+          preferTokenInfo: true
