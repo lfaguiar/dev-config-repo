@@ -26,3 +26,7 @@ spring:
         hibernate:
             ddl-auto: create
         show-sql: true
+   oauth2:
+     resource:
+       userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+       id: produtos
