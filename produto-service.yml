@@ -26,3 +26,16 @@ spring:
         hibernate:
             ddl-auto: create
         show-sql: true
+
+spring:
+  oauth2:
+    client:
+      clientId: 833954718952-vjvitclfqpc22nice5ltmeao1urobtoi.apps.googleusercontent.com
+      clientSecret: pAVl2bKEUPCAMl5jnb5wVxZ_
+      accessTokenUri: <a class="vglnk" href="https://www.googleapis.com/oauth2/v3/token" rel="nofollow"><span>https</span><span>://</span><span>www</span><span>.</span><span>googleapis</span><span>.</span><span>com</span><span>/</span><span>oauth2</span><span>/</span><span>v3</span><span>/</span><span>token</span></a>
+      userAuthorizationUri: <a class="vglnk" href="https://accounts.google.com/o/oauth2/auth" rel="nofollow"><span>https</span><span>://</span><span>accounts</span><span>.</span><span>google</span><span>.</span><span>com</span><span>/</span><span>o</span><span>/</span><span>oauth2</span><span>/</span><span>auth</span></a>
+      clientAuthenticationScheme: query
+      scope: openid profile email
+    resource:
+      userInfoUri: <a class="vglnk" href="https://www.googleapis.com/plus/v1/people/me" rel="nofollow"><span>https</span><span>://</span><span>www</span><span>.</span><span>googleapis</span><span>.</span><span>com</span><span>/</span><span>plus</span><span>/</span><span>v1</span><span>/</span><span>people</span><span>/</span><span>me</span></a>
+      preferTokenInfo: false
